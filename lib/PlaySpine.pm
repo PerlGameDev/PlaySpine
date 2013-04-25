@@ -59,16 +59,21 @@ This is a side project of to experiment making games using the Backbone/Undersco
 =head2 Views & Templates: Very very very work in progress!
 
     #FILE: template/main.tpl
-    
-    [BG 0, 0 file="foo.png"] 
+   
+    [ 
+        { type => 'BG', location => [0, 0], file=>"foo.png"},
 
-    [BOX 0, 0, 10, 10  text=<%= $value %> attr="foo" ]
-    [CIRCLE 0, 0, 10 color=[255, 0, 255, 255] ]
+        { type => 'BOX', location => [0, 0], size=> [10, 10], text => $value, attr=>"foo"},
 
-    [SPRITE  <%=$x%>, 20, 10, 10 texture='<%= $foo %>' ]
+        { type => 'CIRCLE', location => [0, 0, 10], size => [10], color => [255, 0, 255, 255] }, 
 
-    [CUBE 0,0,0 , 5, 5, 5] # OpenGL 3D?!?! why the heck not!
-            
+        { type => 'SPRITE', location => [$x, 20 ], size =>[ 10, 10],  texture='<%= $foo %>' },
+
+        { type => 'CUBE', location => [0,0,0], size=>[ 5, 5, 5] }# OpenGL 3D?!?! why the heck not!
+    ]        
+
+
+Templates are just perl array hashes each 'TYPE' is defined with a class that renders and managages it. This class's instance is passed to the callback handlers in the view and if it binded.
 
     #FILE: view/main.pl
     package MyView;
