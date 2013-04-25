@@ -62,7 +62,7 @@ This is a side project of to experiment making games using the Backbone/Undersco
 
         { type => 'CIRCLE', location => [0, 0, 10], size => [10], color => [255, 0, 255, 255] }, 
 
-        { type => 'SPRITE', location => [$x, 20 ], size =>[ 10, 10],  texture='<%= $foo %>' },
+        { type => 'SPRITE', location => [$x, 20 ], size =>[ 10, 10],  texture=$foo },
 
         { type => 'CUBE', location => [0,0,0], size=>[ 5, 5, 5] }# OpenGL 3D?!?! why the heck not!
     ]        
@@ -86,7 +86,7 @@ Templates are just perl array hashes each 'TYPE' is defined with a class that re
     sub initialize {
         my $self = shift;
 
-        $self->template( { value => $value, foo => 'asdasd', $x => 20 } );
+        $self->template( { value => $value, foo => 'asdasd', x => 20 } );
     }
 
     sub on_box_click {
