@@ -33,7 +33,7 @@ sub trigger {
     foreach my $c_a ( @{$self->callbacks()->{$tag}} ) {
         my $cb = $c_a->{callback};
         my $args = $c_a->{args};
-        $cb->( $self, $cb, @{$args} );
+        $cb->( $self, @{$args} );
     }
 
 }
