@@ -1,4 +1,4 @@
-use 5.12;
+
 use strict;
 use warnings FATAL => 'all';
 use Module::Build;
@@ -8,7 +8,7 @@ my $builder = Module::Build->new(
     license             => 'Artistic_2_0',
     dist_author         => q{Kartik Thakore <kthakore@cpan.org>},
     dist_version_from   => 'lib/PlaySpine.pm',
-    release_status      => 'stable',
+    release_status      => 'unstable',
     configure_requires => {
         'Module::Build' => 0,
     },
@@ -16,7 +16,7 @@ my $builder = Module::Build->new(
         'Test::More' => 0,
     },
     requires => {
-        #'ABC'              => 1.6,
+        'Moose'              => 2.000
         #'Foo::Bar::Module' => 5.0401,
     },
     add_to_cleanup     => [ 'PlaySpine-*' ],

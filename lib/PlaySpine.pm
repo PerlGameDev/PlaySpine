@@ -1,6 +1,6 @@
 package PlaySpine;
 
-use 5.12;
+
 use strict;
 use warnings FATAL => 'all';
 
@@ -14,7 +14,7 @@ Version 0.01
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.01_1';
 
 
 =head1 SYNOPSIS
@@ -122,11 +122,9 @@ Kartik Thakore, C<< <kthakore at cpan.org> >>
 
 =head1 BUGS
 
-Please report any bugs or feature requests to C<bug-playspine at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=PlaySpine>.  I will be notified, and then you'll
+Please report any bugs or feature requests through
+the web interface at L<https://github.com/PerlGameDev/PlaySpine/issues>.  I will be notified, and then you'll
 automatically be notified of progress on your bug as I make changes.
-
-
 
 
 =head1 SUPPORT
@@ -140,9 +138,9 @@ You can also look for information at:
 
 =over 4
 
-=item * RT: CPAN's request tracker (report bugs here)
+=item * GitHub Issue Tracker (report bugs here)
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=PlaySpine>
+L<https://github.com/PerlGameDev/PlaySpine/issues>
 
 =item * AnnoCPAN: Annotated CPAN documentation
 
